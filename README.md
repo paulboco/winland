@@ -1,2 +1,2 @@
 # winland
-Experiments in the land of windows.
+Experiments in the land of Windows™.
