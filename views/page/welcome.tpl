@@ -2,8 +2,8 @@
 
 <div class="content">
     <h1>Welcome, <?php echo empty($name) ? 'guest' : "{$name}" ?></h1>
-    <h3>Welcome to the Winland welcome page.</h3>
-    <p>Hover over each link to see the URI in advance of requesting it.</p>
+    <h3>You are on the Winland welcome page.</h3>
+    <p>Hover over each link to see the URI before clicking it.</p>
     <ul>
         <li><a href="/">The web root</a></li>
         <li><a href="/page/welcome">The URI to the web root</a></li>
