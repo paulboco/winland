@@ -16,7 +16,7 @@ $autoloader->register();
 |--------------------------------------------------------------------------
 */
 
-$autoload = require __DIR__ . '/../config/autoload.php';
+$autoloadConfig = require __DIR__ . '/../config/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ $autoload = require __DIR__ . '/../config/autoload.php';
 |--------------------------------------------------------------------------
 */
 
-foreach ($autoload['files'] as $path) {
+foreach ($autoloadConfig['files'] as $path) {
     require(__DIR__ . '/../' . $path);
 }
 
@@ -34,7 +34,7 @@ foreach ($autoload['files'] as $path) {
 |--------------------------------------------------------------------------
 */
 
-foreach ($autoload['namespaces'] as $namespace => $path) {
+foreach ($autoloadConfig['namespaces'] as $namespace => $path) {
     $autoloader->addNamespace($namespace, __DIR__ . '/../' . $path);
 }
 
@@ -44,4 +44,4 @@ foreach ($autoload['namespaces'] as $namespace => $path) {
 |--------------------------------------------------------------------------
 */
 
-unset($autoload, $autoloader, $namespace, $path);
+unset($autoloader, $autoloadConfig, $namespace, $path);
