@@ -9,35 +9,35 @@ class Router
      *
      * @var string
      */
-    protected $uri;
+    private $uri;
 
     /**
      * The URI Segments
      *
      * @var array
      */
-    protected $segments;
+    private $segments;
 
     /**
      * The Controller
      *
      * @var string
      */
-    protected $controller;
+    private $controller;
 
     /**
      * The Controller's Method
      *
      * @var string
      */
-    protected $method;
+    private $method;
 
     /**
      * The Route Parameters
      *
      * @var array
      */
-    protected $params;
+    private $parameters;
 
     /**
      * Create a new router
@@ -103,7 +103,7 @@ class Router
 
         $this->controller = $this->formatController(array_shift($segments));
         $this->method = $this->formatMethod(array_shift($segments));
-        $this->params = empty($segments) ? array() : $segments;
+        $this->parameters = empty($segments) ? array() : $segments;
     }
 
     /**
@@ -158,9 +158,22 @@ class Router
      */
     private function callControllerMethod()
     {
-        return call_user_func_array(array(
+        call_user_func_array(array(
             $this->controller,
             $this->method,
-        ), $this->params);
+        ), $this->parameters);
+    }
+
+    /**
+     * Magic Getter
+     *
+     * @param  string  $property
+     * @return mixed
+     */
+    public function __get($property)
+    {
+        if (property_exists($this, $property)) {
+            return $this->$property;
+        }
     }
 }
