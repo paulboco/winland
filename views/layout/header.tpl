@@ -6,5 +6,6 @@
 </head>
 <body>
     <header>
-        <div class="brand"><a href="/">Winland</a></div>
+        <span class="brand"><a href="/">Winland</a></span>
+        <span class="nav-link"><a href="/page/about">About</a></span>
     </header>

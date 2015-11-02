@@ -18,7 +18,7 @@ h3 {
     padding-bottom: 15px;
 }
 
-header, header>div.brand>a , thead th {
+header, header>span.brand>a , thead th {
     background-color: #628800;
     color: #fff;
     text-shadow: 1px 2px 5px #2C3102;
@@ -34,7 +34,7 @@ header {
     box-shadow: 0px 0px 10px black;
 }
 
-header>div.brand {
+header>span.brand {
     margin-left: 20px;
     font-size: 30px;
     font-weight: bold;
@@ -42,12 +42,18 @@ header>div.brand {
     letter-spacing: .1em;
 }
 
-header>div.brand>a {
+header>span.brand>a {
     text-decoration: none;
 }
 
-header>div.brand>a:hover {
+header>span.brand>a:hover, header>span.nav-link>a:hover {
     color: #ae9;
+}
+
+header>span.nav-link>a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 30px;
 }
 
 footer {
@@ -66,6 +72,7 @@ div.grid-row, footer {
 
 div.grid-col {
     flex: 1;
+    margin: 1em 0 0 1em;
 }
 
 table {

@@ -22,6 +22,10 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>Detected OS</td>
+                    <td><?php echo PHP_OS ?></td>
+                </tr>
+                <tr>
                     <td>Actual URI</td>
                     <td><?php echo $_SERVER['REQUEST_URI'] ?></td>
                 </tr>
