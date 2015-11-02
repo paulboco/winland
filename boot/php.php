@@ -2,13 +2,11 @@
 
 /*
 |--------------------------------------------------------------------------
-| Set Debug Mode
+| Get Application Configuration
 |--------------------------------------------------------------------------
 */
 
 $appConfig = require __DIR__ . '/../config/app.php';
-
-define('DEBUG', $appConfig['debug']);
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +16,7 @@ define('DEBUG', $appConfig['debug']);
 
 error_reporting(E_ALL);
 
-if (DEBUG) {
+if ($appConfig['debug']) {
     ini_set('display_errors', 1);
     ini_set('html_errors', 1);
     ini_set('log_errors', 0);
