@@ -16,7 +16,7 @@ $config = require __DIR__ . '/../config/app.php';
 
 error_reporting(E_ALL);
 
-if ($appConfig['debug']) {
+if ($config['debug']) {
     ini_set('display_errors', 1);
     ini_set('html_errors', 1);
     ini_set('log_errors', 0);
